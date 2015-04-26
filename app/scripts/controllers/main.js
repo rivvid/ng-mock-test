@@ -8,7 +8,9 @@
  * Controller of the ngmockTestApp
  */
 angular.module('ngmockTestApp')
-  .controller('MainCtrl', function ($scope, something) {
-    console.info(something);
-    $scope.something = something;
+  .controller('MainCtrl', function ($scope, TestService) {
+    setTimeout(function () {
+      TestService.getSomething().then(function(response) { $scope.something = response; });
+    },1000);
+    
   });
