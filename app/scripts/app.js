@@ -4,7 +4,7 @@
 // it first sets up passthrough() on all possible routes
 // then allows you to declare specific route mocks
 // note - ng-mocks must be customized for this to work
-// see 
+// see fork of ng-mocks at git@github.com:rivvid/bower-angular-mocks.git
 angular.module('httpBackendMockHelper',['ngMockE2E'])
   .run(function($httpBackend) {
     // set catchall route for passthrough
