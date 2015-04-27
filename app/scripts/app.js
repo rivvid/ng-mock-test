@@ -13,10 +13,10 @@ angular.module('httpBackendMockHelper',['ngMockE2E'])
     });
   })
   .service('HttpBackendMockService', function($httpBackend) {
-    // patch regex maker, pulled from ng-route:
+    // path regex maker, pulled from ng-route:
     // https://github.com/angular/angular.js/blob/master/src/ngRoute/route.js#L194
     function pathRegExp(path, opts) {
-      var insensitive = false,
+      var insensitive = true,
           ret = {
             originalPath: path,
             regexp: path
